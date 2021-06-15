@@ -7,20 +7,31 @@ We aim at an end-to-end solution for automatic generation of multiple choice que
 First, install dependencies   
 ```bash
 # clone project   
-git clone https://github.com/vinhng10/decepticon.git
+$ git clone https://github.com/vinhng10/decepticon.git
 
 # install project   
-pip install -e .   
-pip install -r requirements.txt
+$ pip install -e .   
+$ pip install -r requirements.txt
  ```   
- Next, navigate to any file and run it.   
- ```bash
-# module folder
-cd project
-
-# run module 
-python main.py    
+Next， request the dataset from here
 ```
+https://www.cs.cmu.edu/~glai1/data/race/
+```
+To train the model
+1. Set the config in the `project/configs` folder
+2. `cd project` and `python main.py`
+
+To use the service of T5 model
+1. Download the ckpts
+2. Run the script
+```shell
+$ cd project/service
+$ python inference.py --article="This is a test" --answer="test"
+ANS test
+QUE This is a _.
+DIS test
+```
+
 # Decepticon - Multiple Choice Question & Distractors Generation   
 Here are the links to the thorough [literature survey](https://github.com/vinhng10/decepticon/blob/master/documents/NLP_Literature_Review_2021.pdf) and [final report](https://github.com/vinhng10/decepticon/blob/master/documents/NLP_Final_Report.pdf) of the project.
 
