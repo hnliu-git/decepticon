@@ -17,12 +17,14 @@ Next， request the dataset from here
 ```
 https://www.cs.cmu.edu/~glai1/data/race/
 ```
-To train the model
+### Train the model
 1. Set the config in the `project/configs` folder
 2. `cd project` and `python main.py`
 
-To use the service of T5 model
-1. Download the ckpts
+### Use the service(T5 model)
+
+#### Run with script
+1. Download the [ckpts](https://drive.google.com/drive/folders/1PQlVkPN3_MKZMvDVj81-u6j4fbozuyp8?usp=sharing) and put them in a right path
 2. Run the script
 ```shell
 $ cd project/service
@@ -30,6 +32,12 @@ $ python inference.py --article="This is a test" --answer="test"
 ANS test
 QUE This is a _.
 DIS test
+```
+
+#### Run with docker
+```shell
+docker pull hnliu/decepticon
+docker run -it -rm -p [port]:8333 hnliu/decepticon 
 ```
 
 # Decepticon - Multiple Choice Question & Distractors Generation   
