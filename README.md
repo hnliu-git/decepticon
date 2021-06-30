@@ -35,9 +35,13 @@ DIS test
 ```
 
 #### Run with docker
+- CPU
 ```shell
-docker pull hnliu/decepticon
-docker run -it -rm -p [port]:8333 hnliu/decepticon 
+docker run -it -rm -p [port]:8333 hnliu/decepticon:latest 
+```
+- GPU
+```shell
+docker run -it -rm -p [port]:8333 hnliu/decepticon:gpu
 ```
 
 # Decepticon - Multiple Choice Question & Distractors Generation   
